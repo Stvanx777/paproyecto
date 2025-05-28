@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 20px;
+    color: #e0e0e0;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a {
+    color: #82b1ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: #f0f0f0;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.question-card {
+    background: #1e1e1e;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+}
+
+.small-text {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.btn-delete {
+    background-color: #e53935;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #c62828;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flash-messages li {
+    background-color: #fdd835;
+    color: #000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: #43a047;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btn-primary:hover {
+    background-color: #2e7d32;
+}
+
+.btn-secondary {
+    background-color: #fb8c00;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-secondary:hover {
+    background-color: #ef6c00;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.question-form input[type="text"],
+.question-form textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.question-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.answer-card {
+    background: #2a2a2a;
+    border-left: 4px solid #42a5f5;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+}

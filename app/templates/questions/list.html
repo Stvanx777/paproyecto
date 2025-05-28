@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Preguntas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="page-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class="flash-messages">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <h1>Bienvenido, {{ current_user.username }}</h1>
+
+        <div class="top-actions">
+            <a href="{{ url_for('questions.ask_question') }}" class="btn-primary">Hacer una nueva pregunta</a>
+            <form action="{{ url_for('auth.logout') }}" method="get" style="display:inline;">
+                <button type="submit" class="btn-secondary">Cerrar sesión</button>
+            </form>
+        </div>
+
+        <h2>Preguntas recientes:</h2>
+        {% for question in questions %}
+        <div class="question-card">
+            <h3>{{ question.title }}</h3>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <a href="{{ url_for('questions.question_detail', question_id=question.id) }}" class="btn-primary">
+                    Ver detalles
+                </a>
+
+                {% if question.author == current_user %}
+                <form action="{{ url_for('questions.delete_question', question_id=question.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn-delete" onclick="return confirm('¿Estás seguro de eliminar esta pregunta?');">Eliminar</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+        <p>No hay preguntas aún.</p>
+        {% endfor %}
+
+    </div>
+</body>
+</html>

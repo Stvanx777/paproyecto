@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacer una pregunta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Hacer una nueva pregunta</h1>
+
+        <form method="POST" class="question-form">
+            <label for="title">Título:</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="content">Contenido:</label>
+            <textarea name="content" id="content" required></textarea>
+
+            <label for="subject">Materia:</label>
+            <input type="text" name="subject" id="subject" required>
+
+            <button type="submit" class="btn-primary">Publicar pregunta</button>
+        </form>
+
+        <a href="{{ url_for('questions.list_questions') }}" class="btn-secondary">Volver a la lista</a>
+    </div>
+</body>
+</html>
